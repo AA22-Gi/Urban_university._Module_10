@@ -70,6 +70,8 @@ class Knight(Thread):
         while self.enemies > 0:
             count += 1
             self.enemies -= self.power
+            if self.enemies < 0:
+                self.enemies = 0
             res.append(f'{self.name}, сражается {count} день(дня)..., осталось {self.enemies} воинов.')
             sleep(1)
 
