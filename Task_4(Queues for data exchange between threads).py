@@ -91,6 +91,7 @@ class Cafe:
             for table in self.tables:
                 if table.guest is None:
                     table.guest = guest
+                    guest.start()
                     print(f'{guest.name} сел(-а) за стол номер {table.number}')
                     break  # гость за столом, прекращаем поиск свободного стола
             else:
